@@ -1,0 +1,1 @@
+print("\27[35m" .. "Obrigado por fazer parte da Monkey.GG / By: Masquantis" .. "\27[0m")
