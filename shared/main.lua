@@ -1,7 +1,7 @@
 Pumpkin = {}
 
 Pumpkin["Pumpkins"] = {
-    "reh_Prop_REH_Lantern_PK_01a", "reh_Prop_REH_Lantern_PK_01b", "reh_Prop_REH_Lantern_PK_01c"
+    "ayc_hpumpkin", "ayc_hscarecrow", "reh_Prop_REH_Lantern_PK_01a", "reh_Prop_REH_Lantern_PK_01b", "reh_Prop_REH_Lantern_PK_01c"
 }
 
 Pumpkin["Coords"] = {

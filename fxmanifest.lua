@@ -26,3 +26,15 @@ server_scripts {
 	"@vrp/lib/utils.lua",
 	'server/*.lua'
 }
+
+data_file 'DLC_ITYP_REQUEST' 'stream/ayc_hscarecrow.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/ayc_hpumpkin.ytyp'
+
+
+-- Pumpkin & Scarecro By Ayccoe
+-- https://ayccoe-webshop.tebex.io/category/clothing
+
+-- Halloween Pumpkin (ayc_hpumpkin)
+-- Model by: Karolina Renkiewicz
+-- Halloween Scarecrow (ayc_hscarecrow)
+-- Model by: angemturc

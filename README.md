@@ -1,3 +1,31 @@
+# Pumpkin Hunt
+
+**Description:**  
+Pumpkin Hunt is a fun and simple script that introduces a Halloween-themed event to your server. It works by spawning pumpkins at predefined locations and rewarding players who find them with customizable bonuses.
+
+### Features:
+
+- **Simple Configuration:**  
+  Easily customize all script options through the `config.lua` file, allowing for quick and efficient adjustments.
+
+- **Defined Coordinates:**  
+  Easily set any coordinates for pumpkin spawns, ensuring strategic distribution across the map.
+
+- **Customizable Rewards:**  
+  Configure reward prizes easily to motivate players to participate in the hunt.
+
+- **Unique Cooldown System:**  
+  Each player and pumpkin has an individual cooldown that can be easily configured, preventing farming and ensuring a balanced experience.
+
+- **Multi-framework Support:**  
+  The system is compatible with multiple frameworks, making it easy to adjust for integration in different environments.
+
+### Dependencies:
+- This script depends on the **target** script to enable interactions (for now).
+
+[--------------------------------------------------------]
+[--------------------------------------------------------]
+
 ## Pumpkin Hunt - Caça Abóboras
 
 **Descrição:**  
