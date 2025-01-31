@@ -31,7 +31,7 @@ data_file 'DLC_ITYP_REQUEST' 'stream/ayc_hscarecrow.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/ayc_hpumpkin.ytyp'
 
 
--- Pumpkin & Scarecro By Ayccoe
+-- Pumpkin & Scarecrow By Ayccoe
 -- https://ayccoe-webshop.tebex.io/category/clothing
 
 -- Halloween Pumpkin (ayc_hpumpkin)
