@@ -14,12 +14,36 @@ local pumpkinCooldowns = {}
 
 local selectedFunctions = Functions["Functions"][Functions["Framework"]]
 
+local prizeRarities = {
+    common = 70,
+    uncommon = 20,
+    rare = 8,
+    legendary = 2
+}
+
+local function getRandomPrize()
+    local totalWeight = 0
+    for _, prize in ipairs(Pumpkin["Prizes"]) do
+        totalWeight = totalWeight + prizeRarities[prize.rarity]
+    end
+
+    local randomNumber = math.random(1, totalWeight)
+    local currentWeight = 0
+
+    for _, prize in ipairs(Pumpkin["Prizes"]) do
+        currentWeight = currentWeight + prizeRarities[prize.rarity]
+        if randomNumber <= currentWeight then
+            return prize.name
+        end
+    end
+end
+
 RegisterNetEvent("Pumpkin:Collect")
 AddEventHandler("Pumpkin:Collect", function()
     local source = source
     local Passport = selectedFunctions[1](source)
 
-    local cooldownTime = 100 
+    local cooldownTime = 100
     local currentTime = os.time()
     local playerCoords = GetEntityCoords(GetPlayerPed(source))
 
@@ -44,23 +68,22 @@ AddEventHandler("Pumpkin:Collect", function()
                 local collectedItems = {}
 
                 for i = 1, totalItemsToCollect do
-                    local randomIndex = math.random(1, #Pumpkin["Prizes"])
-                    local prize = Pumpkin["Prizes"][randomIndex]
+                    local prize = getRandomPrize()
                     local Valuation = math.random(1, 3)
 
                     if (selectedFunctions[2](Passport) + ItemWeight(prize) * Valuation) <= selectedFunctions[3](Passport) then
-                        
+
                         local animDict = "anim@scripted@player@freemode@tun_prep_ig1_grab_low@heeled@"
                         local animName = "grab_low"
-                        
+
                         RequestAnimDict(animDict)
                         while not HasAnimDictLoaded(animDict) do
                             RequestAnimDict(animDict)
                             Wait(50)
                         end
-                        
+
                         TaskPlayAnim(source, animDict, animName, 8.0, -8.0, -1, 49, 0, false, false, false)
-                        
+
                         Wait(500)
 
                         selectedFunctions[4](Passport, prize, Valuation, true)

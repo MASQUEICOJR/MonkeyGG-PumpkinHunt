@@ -27,5 +27,14 @@ Pumpkin["Coords"] = {
 }
 
 Pumpkin["Prizes"] = {
-    "donut", "marshmallow", "cookies", "strawberry", "energetic"
+    { name = "donut", rarity = "common" },
+    { name = "marshmallow", rarity = "common" },
+    { name = "cookies", rarity = "common" },
+    { name = "strawberry", rarity = "common" },
+    { name = "energetic", rarity = "common" },
+    { name = "pumpkin_pie", rarity = "uncommon" },
+    { name = "candy_corn", rarity = "uncommon" },
+    { name = "chocolate_bar", rarity = "uncommon" },
+    { name = "halloween_mask", rarity = "rare" },
+    { name = "golden_pumpkin", rarity = "legendary" }
 }
