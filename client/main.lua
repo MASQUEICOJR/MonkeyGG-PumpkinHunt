@@ -13,6 +13,13 @@ vSERVER = Tunnel.getInterface("pumpkin")
 local PumpkinSpawned = {}
 local PumpkinTargeted = {}
 
+local animDict = "anim@scripted@player@freemode@tun_prep_ig1_grab_low@heeled@"
+RequestAnimDict(animDict)
+while not HasAnimDictLoaded(animDict) do
+    RequestAnimDict(animDict)
+    Wait(50)
+end
+
 CreateThread(function()
     while true do
         local Ped = PlayerPedId()
