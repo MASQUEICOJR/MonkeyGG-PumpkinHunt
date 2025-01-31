@@ -5,7 +5,7 @@ lua54 'yes'
 name "MonkeyGG-PumpkinHunt"
 description "Um simples script de caça a aboboras de halloween, feito para a comunidade!"
 author "MASQUEICOJR"
-version "1.0.0.0"
+version "1.0.0.1"
 
 shared_scripts {
 	'shared/*.lua'
