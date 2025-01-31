@@ -70,21 +70,18 @@ AddEventHandler("Pumpkin:Collect", function()
                 for i = 1, totalItemsToCollect do
                     local prize = getRandomPrize()
                     local Valuation = math.random(1, 3)
+                    local 
 
                     if (selectedFunctions[2](Passport) + ItemWeight(prize) * Valuation) <= selectedFunctions[3](Passport) then
 
                         local animDict = "anim@scripted@player@freemode@tun_prep_ig1_grab_low@heeled@"
                         local animName = "grab_low"
 
-                        RequestAnimDict(animDict)
-                        while not HasAnimDictLoaded(animDict) do
-                            RequestAnimDict(animDict)
-                            Wait(50)
-                        end
-
                         TaskPlayAnim(source, animDict, animName, 8.0, -8.0, -1, 49, 0, false, false, false)
 
                         Wait(500)
+
+                        ClearPedTasks(source)
 
                         selectedFunctions[4](Passport, prize, Valuation, true)
                         table.insert(collectedItems, prize)
